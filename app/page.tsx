@@ -12,7 +12,9 @@ export default function Home() {
         <button
           className='btn btn-wide mt-3'
           onClick={() =>
-            document.getElementById('new_class_modal')?.showModal()
+            (
+              document.getElementById('new_class_modal') as HTMLDialogElement
+            )?.showModal()
           }
         >
           שיעור בודד
@@ -20,7 +22,11 @@ export default function Home() {
         <button
           className='btn btn-wide btn-primary mt-3'
           onClick={() =>
-            document.getElementById('new_punch_card_modal')?.showModal()
+            (
+              document.getElementById(
+                'new_punch_card_modal'
+              ) as HTMLDialogElement
+            )?.showModal()
           }
         >
           כרטיסיה
