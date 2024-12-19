@@ -1,5 +1,6 @@
 'use client';
 
+import ClassesPage from './ClassesList';
 import Navbar from './navbar';
 import NewClassModal from './NewClassModal';
 import NewPunchCardModal from './NewPunchCardModal';
@@ -34,6 +35,8 @@ export default function Home() {
       </div>
       <NewClassModal />
       <NewPunchCardModal />
+
+      <ClassesPage />
     </div>
   );
 }
