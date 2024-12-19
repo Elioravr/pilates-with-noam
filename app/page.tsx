@@ -18,7 +18,7 @@ export default function Home() {
             )?.showModal()
           }
         >
-          שיעור בודד
+          הוסף שיעור בודד
         </button>
         <button
           className='btn btn-wide btn-primary mt-3'
@@ -30,7 +30,7 @@ export default function Home() {
             )?.showModal()
           }
         >
-          כרטיסיה
+          הוסף כרטיסיה
         </button>
       </div>
       <NewClassModal />

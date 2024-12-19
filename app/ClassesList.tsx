@@ -25,29 +25,37 @@ export default function ClassesPage() {
     fetchClasses();
   }, []); // Empty dependency array to run only once
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  //   if (loading) return <p>Loading...</p>;
+  //   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className='overflow-x-auto'>
-      <div className='p-3 text-2xl'>שיעורים בודדים</div>
-      <table className='table'>
-        {/* head */}
-        <thead>
-          <tr>
-            <th>שם המתאמנ/ת</th>
-            <th>תאריך ושעה</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(classes || {}).map(([id, cls]: [string, Class]) => (
-            <tr key={id}>
-              <th>{cls.practitionerName}</th>
-              <td>{cls.datetime}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className='card bg-base-100 w-96 shadow-xl'>
+      <div className='card-body flex justify-center items-center'>
+        <h2 className='card-title'>שיעורים בודדים</h2>
+        {loading ? (
+          <span className='loading loading-ring loading-lg'></span>
+        ) : (
+          <table className='table'>
+            {/* head */}
+            <thead>
+              <tr>
+                <th>שם המתאמנ/ת</th>
+                <th>תאריך ושעה</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(classes || {}).map(
+                ([id, cls]: [string, Class]) => (
+                  <tr key={id}>
+                    <th>{cls.practitionerName}</th>
+                    <td>{cls.datetime}</td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
   );
 }
