@@ -1,9 +1,10 @@
 'use client';
 
-import ClassesPage from './ClassesList';
+import ClassesList from './ClassesList';
 import Navbar from './navbar';
 import NewClassModal from './NewClassModal';
 import NewPunchCardModal from './NewPunchCardModal';
+import PunchCardsList from './PunchCardList';
 
 export default function Home() {
   return (
@@ -36,7 +37,8 @@ export default function Home() {
       <NewClassModal />
       <NewPunchCardModal />
 
-      <ClassesPage />
+      <ClassesList />
+      <PunchCardsList />
     </div>
   );
 }
