@@ -22,7 +22,7 @@ export default function Home() {
           הוסף שיעור בודד
         </button>
         <button
-          className='btn btn-wide btn-primary mt-3'
+          className='btn btn-wide btn-secondary mt-3'
           onClick={() =>
             (
               document.getElementById(

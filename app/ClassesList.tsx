@@ -35,7 +35,7 @@ export default function ClassesList() {
       {loading ? (
         <span className='m-auto loading loading-ring loading-lg'></span>
       ) : (
-        <div className='carousel carousel-center bg-neutral rounded-box space-x-4 p-4 mx-2'>
+        <div className='carousel carousel-center rounded-box space-x-4 p-4 mx-2'>
           {Object.entries(classes || {}).map(([id, cls]: [string, Class]) => (
             <div className='carousel-item mx-3' key={id}>
               <div className='card bg-base-100 shadow-xl'>
@@ -58,7 +58,7 @@ export default function ClassesList() {
                   <p>{cls.datetime}</p>
                   <div className='card-actions justify-end'>
                     <button className='btn'>עריכה</button>
-                    <button className='btn btn-primary'>קישור</button>
+                    <button className='btn btn-secondary'>קישור</button>
                   </div>
                 </div>
               </div>
